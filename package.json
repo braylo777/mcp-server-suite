@@ -1,0 +1,35 @@
+{
+  "name": "mcp-server-suite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Three local MCP servers for small-business agents: leads, page audit, and booking availability.",
+  "license": "MIT",
+  "type": "module",
+  "author": "Brandon Lopez (Braylo)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braylo-ai/mcp-server-suite.git"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/leads",
+    "packages/page-audit",
+    "packages/booking"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false && tsc -p tsconfig.test.json --noEmit --pretty false",
+    "test": "tsc -b && node --import tsx --test --test-reporter=spec packages/core/test/*.test.ts packages/leads/test/*.test.ts packages/page-audit/test/*.test.ts packages/booking/test/*.test.ts",
+    "bench": "tsx bench/run.ts",
+    "issue-token": "tsx scripts/issue-token.ts"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^22.19.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

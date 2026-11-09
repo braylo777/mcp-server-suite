@@ -1,0 +1,37 @@
+{
+  "measured_at": "2026-11-09T21:56:56.201Z",
+  "node": "v22.23.4",
+  "platform": "linux 6.12.113+ x64",
+  "cpu": "Intel(R) Xeon(R) Processor",
+  "note": "One run on this machine. Counts are exact and this script exits 1 if they change. Timings are not a lab benchmark.",
+  "rate_limit": {
+    "limit": 60,
+    "allowed": 60,
+    "denied_on_call": 61,
+    "checks": 200000,
+    "ns_per_check": 99.68
+  },
+  "leads": {
+    "inserted": 1000,
+    "insert_ms": 586.967,
+    "search_query": "lead500",
+    "search_hits": 1,
+    "search_ms": 0.863
+  },
+  "audit": {
+    "fixture": "fixtures/page/north-wharf.html",
+    "bytes": 355,
+    "parse_ms": 3.8,
+    "findings": [
+      "images_missing_alt",
+      "missing_canonical",
+      "missing_meta_description",
+      "thin_content"
+    ]
+  },
+  "booking": {
+    "weekly_mondays_in_2026": 52,
+    "expand_ms": 9.477,
+    "free_tuesday_30min_slots": 16
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@braylo/mcp-page-audit",
+  "version": "0.1.0",
+  "description": "Local MCP server that fetches one URL and returns measured fetch timings plus deterministic HTML findings. Not a Lighthouse score.",
+  "license": "MIT",
+  "type": "module",
+  "author": "Brandon Lopez (Braylo)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braylo-ai/mcp-server-suite.git",
+    "directory": "packages/page-audit"
+  },
+  "homepage": "https://github.com/braylo-ai/mcp-server-suite/tree/main/packages/page-audit",
+  "bugs": {
+    "url": "https://github.com/braylo-ai/mcp-server-suite/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "seo",
+    "audit"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "bin": {
+    "mcp-page-audit": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@braylo/mcp-core": "0.1.0",
+    "@modelcontextprotocol/server": "^2.4.0",
+    "node-html-parser": "^9.0.1",
+    "zod": "^4.1.12"
+  }
+}
